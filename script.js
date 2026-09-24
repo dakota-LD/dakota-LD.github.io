@@ -1,12 +1,7 @@
-// =========================================================
-// LD SAFETY SOLUTIONS
-// Site Interactions
-// =========================================================
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
-  const header = document.getElementById("site-header");
+  const header =
+    document.getElementById("site-header");
 
   const menuButton =
     document.getElementById("menu-button");
@@ -18,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("copyright-year");
 
 
-  // -------------------------------------------------------
-  // CURRENT YEAR
-  // -------------------------------------------------------
+  /* =====================================
+     CURRENT YEAR
+  ====================================== */
 
   if (copyrightYear) {
     copyrightYear.textContent =
@@ -28,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // -------------------------------------------------------
-  // HEADER BACKGROUND ON SCROLL
-  // -------------------------------------------------------
+  /* =====================================
+     NAVBAR SCROLL STATE
+  ====================================== */
 
   const updateHeader = () => {
 
@@ -47,26 +42,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateHeader();
 
+
   window.addEventListener(
     "scroll",
     updateHeader,
-    { passive: true }
+    {
+      passive: true
+    }
   );
 
 
-  // -------------------------------------------------------
-  // MOBILE MENU
-  // -------------------------------------------------------
+  /* =====================================
+     MOBILE MENU
+  ====================================== */
 
   const closeMenu = () => {
 
-    if (!menuButton || !mobileMenu) return;
+    if (!menuButton || !mobileMenu) {
+      return;
+    }
 
-    menuButton.classList.remove("active");
+    menuButton.classList.remove(
+      "active"
+    );
 
-    mobileMenu.classList.remove("active");
+    mobileMenu.classList.remove(
+      "active"
+    );
 
-    document.body.classList.remove("menu-open");
+    document.body.classList.remove(
+      "menu-open"
+    );
 
     menuButton.setAttribute(
       "aria-expanded",
@@ -83,13 +89,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const openMenu = () => {
 
-    if (!menuButton || !mobileMenu) return;
+    if (!menuButton || !mobileMenu) {
+      return;
+    }
 
-    menuButton.classList.add("active");
+    menuButton.classList.add(
+      "active"
+    );
 
-    mobileMenu.classList.add("active");
+    mobileMenu.classList.add(
+      "active"
+    );
 
-    document.body.classList.add("menu-open");
+    document.body.classList.add(
+      "menu-open"
+    );
 
     menuButton.setAttribute(
       "aria-expanded",
@@ -111,7 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
       () => {
 
         const isOpen =
-          menuButton.classList.contains("active");
+          menuButton.classList.contains(
+            "active"
+          );
 
         if (isOpen) {
           closeMenu();
@@ -149,12 +165,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // -------------------------------------------------------
-  // SCROLL REVEAL
-  // -------------------------------------------------------
+  /* =====================================
+     SCROLL REVEALS
+  ====================================== */
 
   const revealElements =
-    document.querySelectorAll(".reveal");
+    document.querySelectorAll(
+      ".reveal"
+    );
 
 
   if (
@@ -167,26 +185,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         (entries, observer) => {
 
-          entries.forEach((entry) => {
+          entries.forEach(
+            (entry) => {
 
-            if (!entry.isIntersecting) {
-              return;
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
             }
-
-            entry.target.classList.add(
-              "visible"
-            );
-
-            observer.unobserve(
-              entry.target
-            );
-
-          });
+          );
 
         },
 
         {
           threshold: 0.12,
+
           rootMargin:
             "0px 0px -45px 0px"
         }
@@ -219,15 +242,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // -------------------------------------------------------
-  // CLOSE MOBILE MENU IF WINDOW RETURNS TO DESKTOP
-  // -------------------------------------------------------
+  /* =====================================
+     HANDLE DESKTOP RESIZE
+  ====================================== */
 
   window.addEventListener(
     "resize",
     () => {
 
-      if (window.innerWidth > 980) {
+      if (
+        window.innerWidth > 980
+      ) {
         closeMenu();
       }
 
