@@ -338,24 +338,25 @@ h3 {
 
 .brand {
   display: inline-flex;
-
   align-items: center;
 
-  gap: 12px;
+  gap: 9px;
 
   width: fit-content;
 
   color: var(--text);
-
   text-decoration: none;
 }
 
 
 .brand-logo {
-  width: 44px;
-  height: 44px;
+  width: auto;
+  height: 28px;
+
+  max-width: 58px;
 
   object-fit: contain;
+  object-position: center;
 }
 
 
@@ -2292,8 +2293,12 @@ h3 {
 
 
 .footer-logo {
-  width: 50px;
-  height: 50px;
+  width: auto;
+  height: 34px;
+
+  max-width: 72px;
+
+  object-fit: contain;
 }
 
 
@@ -2715,8 +2720,9 @@ h3 {
 
 
   .brand-logo {
-    width: 40px;
-    height: 40px;
+    width: auto;
+    height: 25px;
+    max-width: 52px;
   }
 
 
