@@ -2,157 +2,815 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
+
     <meta
       name="description"
-      content="LD Safety Solutions, Inc. connects safety-focused partners and products."
+      content="LD Safety Solutions develops practical workplace safety technology and systems built around real-world operations."
     >
+
+    <meta name="theme-color" content="#0d100f">
+
     <title>LD Safety Solutions, Inc.</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     >
+
     <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
-    <main class="site-shell">
-      <section class="hero" aria-labelledby="site-title">
-        <h1 id="site-title">LD Safety Solutions, Inc.</h1>
-      </section>
 
-      <section class="link-stage" aria-label="Partner and product links">
-        <div class="listing product-listing" aria-labelledby="products-title">
-          <h2 id="products-title">Products</h2>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-          <div class="logo-row">
-            <a
-              class="logo-link oasis-link"
-              href="https://oasissafetyapp.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Oasis at oasissafetyapp.com"
-            >
-              <img src="assets/oasis-logo.png" alt="Oasis Safety App logo">
-            </a>
-          </div>
-        </div>
+    <header class="site-header" id="site-header">
+      <div class="nav-shell">
 
-        <div class="listing" aria-labelledby="partners-title">
-          <h2 id="partners-title">Partners</h2>
+        <a class="brand" href="#top" aria-label="LD Safety Solutions home">
+          <span class="brand-mark">LD</span>
 
-          <div class="logo-row partners-row">
-            <a
-              class="logo-link mark-link"
-              href="https://oregonrms.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit ORMS at oregonrms.com"
-            >
-              <img src="assets/orms-logo.png" alt="ORMS logo">
-            </a>
+          <span class="brand-copy">
+            <strong>LD Safety Solutions</strong>
+            <small>Inc.</small>
+          </span>
+        </a>
 
-            <a
-              class="logo-link mark-link"
-              href="https://oregonrms.com/ofss"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit OFSS at oregonrms.com/ofss"
-            >
-              <img src="assets/ofss-logo.png" alt="OFSS logo">
-            </a>
-          </div>
-        </div>
-      </section>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#oasis">OASIS</a>
+          <a href="#companies">Companies</a>
+          <a href="#leadership">Leadership</a>
+        </nav>
 
-      <section class="team" aria-labelledby="team-title">
-        <h2 id="team-title">Leadership</h2>
+        <a
+          class="nav-cta"
+          href="https://oasissafetyapp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore OASIS
+          <span aria-hidden="true">↗</span>
+        </a>
 
-        <div class="team-grid">
-          <article class="team-member">
-            <div class="portrait-frame">
-              <img src="assets/eric-lloyd.avif" alt="Eric Lloyd">
-            </div>
-            <div class="team-copy">
-              <p class="role">President of LD Safety Solutions</p>
-              <h3>Eric Lloyd</h3>
-              <p>
-                Eric is an experienced safety consultant, owns ORMS and OFSS,
-                and helps shape OASIS around practical reporting, compliance,
-                and real-world field operations.
-              </p>
-            </div>
-          </article>
+        <button
+          class="menu-button"
+          id="menu-button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+        >
+          <span></span>
+          <span></span>
+        </button>
 
-          <article class="team-member reverse">
-            <div class="portrait-frame">
-              <img src="assets/dakota-oasis-photo.jpg" alt="Dakota Dunagan">
-            </div>
-            <div class="team-copy">
-              <p class="role">Vice President &amp; OASIS Lead Developer</p>
-              <h3>Dakota Dunagan</h3>
-              <p>
-                Dakota leads OASIS development and helps translate field safety
-                workflows into tools that teams can actually use every day.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
+      </div>
 
-    <footer class="site-footer" aria-labelledby="footer-title">
-      <div class="footer-panel">
-        <div class="footer-copy">
-          <p class="footer-kicker">LD Safety Solutions, Inc.</p>
-          <h2 id="footer-title">Safety systems built for real field work.</h2>
-          <p>
-            Software, consulting, and partner tools for teams that need safety
-            workflows to stay practical.
-          </p>
-        </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <nav aria-label="Mobile navigation">
+          <a href="#about">About</a>
+          <a href="#oasis">OASIS</a>
+          <a href="#companies">Companies</a>
+          <a href="#leadership">Leadership</a>
 
-        <div class="footer-card-grid" aria-label="Footer links">
           <a
-            class="footer-card"
+            class="mobile-oasis-link"
             href="https://oasissafetyapp.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>Product</span>
-            <strong>Oasis</strong>
-            <small>oasissafetyapp.com</small>
+            Explore OASIS
+            <span>↗</span>
           </a>
+        </nav>
+      </div>
+    </header>
 
-          <a
-            class="footer-card"
-            href="https://oregonrms.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>Partner</span>
-            <strong>ORMS</strong>
-            <small>oregonrms.com</small>
-          </a>
 
-          <a
-            class="footer-card"
-            href="https://oregonrms.com/ofss"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>Partner</span>
-            <strong>OFSS</strong>
-            <small>oregonrms.com/ofss</small>
-          </a>
+    <main id="top">
+
+      <!-- =========================
+           HERO
+      ========================== -->
+
+      <section class="hero section-dark">
+
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-grid-pattern"></div>
+
+        <div class="section-shell hero-layout">
+
+          <div class="hero-copy reveal">
+            <p class="eyebrow">
+              LD Safety Solutions, Inc.
+            </p>
+
+            <h1>
+              Safety systems<br>
+              built for
+              <span>real work.</span>
+            </h1>
+
+            <p class="hero-description">
+              We develop practical software and safety solutions around the way
+              organizations actually operate — combining field experience with
+              modern technology.
+            </p>
+
+            <div class="hero-actions">
+
+              <a
+                class="button button-primary"
+                href="#oasis"
+              >
+                Explore Our Products
+                <span>↓</span>
+              </a>
+
+              <a
+                class="button button-secondary"
+                href="#about"
+              >
+                About LD Safety
+              </a>
+
+            </div>
+          </div>
+
+
+          <div class="hero-visual reveal delay-1">
+
+            <div class="system-card system-card-back">
+              <span>Field Experience</span>
+            </div>
+
+            <div class="system-card system-card-middle">
+              <span>Safety Operations</span>
+            </div>
+
+            <div class="system-card system-card-front">
+
+              <div class="system-card-header">
+                <span class="status-dot"></span>
+                <span>LD Safety Solutions</span>
+              </div>
+
+              <div class="system-card-main">
+
+                <div class="system-icon">
+                  LD
+                </div>
+
+                <p>
+                  Practical technology built around real-world safety.
+                </p>
+
+              </div>
+
+              <div class="system-card-footer">
+                <span>Software</span>
+                <span>Safety</span>
+                <span>Operations</span>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
+        <div class="hero-scroll">
+          <span>Scroll to explore</span>
+          <div class="scroll-line"></div>
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           ABOUT / PILLARS
+      ========================== -->
+
+      <section class="about section-neutral" id="about">
+
+        <div class="section-shell">
+
+          <div class="section-heading reveal">
+            <p class="eyebrow">What we build</p>
+
+            <h2>
+              Technology shaped
+              <br>
+              <span>by the field.</span>
+            </h2>
+
+            <p class="section-intro">
+              LD Safety Solutions combines hands-on safety experience with
+              modern software development to create tools that solve real
+              operational problems.
+            </p>
+          </div>
+
+
+          <div class="pillar-grid">
+
+            <article class="pillar-card reveal">
+              <div class="pillar-number">01</div>
+
+              <h3>Practical</h3>
+
+              <p>
+                Built around actual workplace workflows instead of forcing teams
+                into complicated systems.
+              </p>
+            </article>
+
+
+            <article class="pillar-card reveal delay-1">
+              <div class="pillar-number">02</div>
+
+              <h3>Accessible</h3>
+
+              <p>
+                Designed to be approachable for the people who actually need to
+                use safety tools every day.
+              </p>
+            </article>
+
+
+            <article class="pillar-card reveal delay-2">
+              <div class="pillar-number">03</div>
+
+              <h3>Purpose-Built</h3>
+
+              <p>
+                Created specifically for safety operations — not retrofitted
+                from generic business software.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           OASIS
+      ========================== -->
+
+      <section class="oasis-section" id="oasis">
+
+        <div class="oasis-glow"></div>
+
+        <div class="section-shell oasis-layout">
+
+          <div class="oasis-visual reveal">
+
+            <div class="product-window">
+
+              <div class="window-bar">
+                <div class="window-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div class="window-url">
+                  oasissafetyapp.com
+                </div>
+              </div>
+
+
+              <div class="product-window-body">
+
+                <img
+                  src="assets/oasis-logo.png"
+                  alt="OASIS workplace safety app"
+                  class="oasis-product-logo"
+                >
+
+                <div class="fake-dashboard">
+
+                  <div class="fake-sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <div class="fake-content">
+
+                    <div class="fake-title"></div>
+
+                    <div class="fake-cards">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+
+                    <div class="fake-panel"></div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="oasis-copy reveal delay-1">
+
+            <p class="eyebrow oasis-eyebrow">
+              Featured Product
+            </p>
+
+            <h2>
+              OASIS
+            </h2>
+
+            <h3>
+              Safety Operations,
+              <span>Simplified.</span>
+            </h3>
+
+            <p>
+              OASIS brings essential workplace safety functions into one
+              accessible platform, helping organizations replace scattered
+              paperwork with organized digital workflows.
+            </p>
+
+
+            <div class="feature-list">
+
+              <div class="feature-item">
+                <span>01</span>
+                <p>WPS Central Posting</p>
+              </div>
+
+              <div class="feature-item">
+                <span>02</span>
+                <p>Heat &amp; Smoke Safety</p>
+              </div>
+
+              <div class="feature-item">
+                <span>03</span>
+                <p>Safety Reports</p>
+              </div>
+
+              <div class="feature-item">
+                <span>04</span>
+                <p>Training Records</p>
+              </div>
+
+            </div>
+
+
+            <div class="oasis-actions">
+
+              <a
+                class="button oasis-button"
+                href="https://oasissafetyapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Explore OASIS
+                <span>↗</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           COMPANIES
+      ========================== -->
+
+      <section class="companies section-dark" id="companies">
+
+        <div class="section-shell">
+
+          <div class="section-heading centered reveal">
+
+            <p class="eyebrow">
+              Connected Experience
+            </p>
+
+            <h2>
+              Built from real-world
+              <br>
+              <span>safety experience.</span>
+            </h2>
+
+            <p class="section-intro">
+              LD Safety Solutions brings together software development and
+              hands-on industry experience through a network of closely
+              connected safety organizations.
+            </p>
+
+          </div>
+
+
+          <div class="company-grid">
+
+            <a
+              class="company-card company-orms reveal"
+              href="https://oregonrms.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="company-card-top">
+                <span>Safety Consulting</span>
+                <span class="company-arrow">↗</span>
+              </div>
+
+              <div class="company-logo-wrap">
+                <img src="assets/orms-logo.png" alt="Oregon Risk Management Solutions">
+              </div>
+
+              <div class="company-copy">
+                <h3>Oregon Risk Management Solutions</h3>
+
+                <p>
+                  Practical workplace safety consulting, training, and
+                  regulatory support.
+                </p>
+              </div>
+
+            </a>
+
+
+            <a
+              class="company-card company-ofss reveal delay-1"
+              href="https://oregonrms.com/ofss"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="company-card-top">
+                <span>Fire Safety</span>
+                <span class="company-arrow">↗</span>
+              </div>
+
+              <div class="company-logo-wrap">
+                <img src="assets/ofss-logo.png" alt="Oregon Fire Safety Solutions">
+              </div>
+
+              <div class="company-copy">
+                <h3>Oregon Fire Safety Solutions</h3>
+
+                <p>
+                  Fire extinguisher service and fire-safety support for
+                  workplaces across Oregon.
+                </p>
+              </div>
+
+            </a>
+
+
+            <a
+              class="company-card company-oasis reveal delay-2"
+              href="https://oasissafetyapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="company-card-top">
+                <span>Safety Technology</span>
+                <span class="company-arrow">↗</span>
+              </div>
+
+              <div class="company-logo-wrap">
+                <img src="assets/oasis-logo.png" alt="OASIS">
+              </div>
+
+              <div class="company-copy">
+                <h3>OASIS</h3>
+
+                <p>
+                  A digital workplace safety platform designed around
+                  practical day-to-day operations.
+                </p>
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           MISSION / WHY
+      ========================== -->
+
+      <section class="mission">
+
+        <div class="mission-background-text" aria-hidden="true">
+          PRACTICAL
+        </div>
+
+        <div class="section-shell mission-shell">
+
+          <p class="eyebrow reveal">
+            Why LD Exists
+          </p>
+
+          <h2 class="reveal">
+            Good safety tools shouldn't
+            <span>make safety harder.</span>
+          </h2>
+
+          <p class="mission-copy reveal">
+            Organizations shouldn't need complicated enterprise systems,
+            piles of paperwork, or unnecessary complexity just to manage
+            everyday safety responsibilities.
+          </p>
+
+          <p class="mission-copy reveal">
+            We build tools with the people who actually use them.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           LEADERSHIP
+      ========================== -->
+
+      <section class="leadership section-neutral" id="leadership">
+
+        <div class="section-shell">
+
+          <div class="section-heading reveal">
+
+            <p class="eyebrow">
+              Leadership
+            </p>
+
+            <h2>
+              Field experience meets
+              <br>
+              <span>product development.</span>
+            </h2>
+
+          </div>
+
+
+          <div class="leadership-grid">
+
+            <article class="leader-card reveal">
+
+              <div class="leader-photo">
+                <img
+                  src="assets/eric-lloyd.avif"
+                  alt="Eric Lloyd"
+                >
+              </div>
+
+              <div class="leader-content">
+
+                <p class="leader-role">
+                  President
+                </p>
+
+                <h3>
+                  Eric Lloyd
+                </h3>
+
+                <p>
+                  Eric is an experienced safety consultant and owner of Oregon
+                  Risk Management Solutions and Oregon Fire Safety Solutions.
+                  His field experience helps shape LD's products around actual
+                  workplace safety and compliance needs.
+                </p>
+
+                <div class="leader-focus">
+                  <span>Field Operations</span>
+                  <span>Safety Consulting</span>
+                  <span>Product Strategy</span>
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <article class="leader-card leader-card-reverse reveal delay-1">
+
+              <div class="leader-photo">
+                <img
+                  src="assets/dakota-oasis-photo.jpg"
+                  alt="Dakota Dunagan"
+                >
+              </div>
+
+              <div class="leader-content">
+
+                <p class="leader-role">
+                  Vice President &amp; OASIS Lead Developer
+                </p>
+
+                <h3>
+                  Dakota Dunagan
+                </h3>
+
+                <p>
+                  Dakota leads development of OASIS and translates practical
+                  workplace safety workflows into digital tools designed to be
+                  understandable, useful, and easy to operate.
+                </p>
+
+                <div class="leader-focus">
+                  <span>Software Development</span>
+                  <span>Product Design</span>
+                  <span>User Experience</span>
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           FINAL CTA
+      ========================== -->
+
+      <section class="final-cta">
+
+        <div class="final-glow"></div>
+
+        <div class="section-shell final-cta-shell reveal">
+
+          <p class="eyebrow">
+            LD Safety Solutions
+          </p>
+
+          <h2>
+            Let's build safer
+            <span>workplaces.</span>
+          </h2>
+
+          <p>
+            Explore the technology and safety organizations behind
+            LD Safety Solutions.
+          </p>
+
+          <div class="final-actions">
+
+            <a
+              class="button button-primary"
+              href="https://oasissafetyapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore OASIS
+              <span>↗</span>
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://oregonrms.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit ORMS
+              <span>↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+      <div class="section-shell footer-layout">
+
+        <div class="footer-brand">
+
+          <div class="brand footer-brand-logo">
+            <span class="brand-mark">LD</span>
+
+            <span class="brand-copy">
+              <strong>LD Safety Solutions</strong>
+              <small>Inc.</small>
+            </span>
+          </div>
+
+          <p>
+            Practical technology for workplace safety.
+          </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <div>
+            <p class="footer-heading">
+              Explore
+            </p>
+
+            <a href="#about">About</a>
+            <a href="#oasis">OASIS</a>
+            <a href="#companies">Companies</a>
+            <a href="#leadership">Leadership</a>
+          </div>
+
+
+          <div>
+            <p class="footer-heading">
+              Network
+            </p>
+
+            <a
+              href="https://oasissafetyapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OASIS ↗
+            </a>
+
+            <a
+              href="https://oregonrms.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ORMS ↗
+            </a>
+
+            <a
+              href="https://oregonrms.com/ofss"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OFSS ↗
+            </a>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 LD Safety Solutions, Inc. All rights reserved.</p>
-        <a href="#site-title">Back to top</a>
+
+      <div class="section-shell footer-bottom">
+
+        <p>
+          &copy; <span id="copyright-year">2026</span>
+          LD Safety Solutions, Inc. All rights reserved.
+        </p>
+
+        <a href="#top">
+          Back to top ↑
+        </a>
+
       </div>
+
     </footer>
+
+
+    <script src="script.js"></script>
+
   </body>
 </html>
